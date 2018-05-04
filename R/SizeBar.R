@@ -54,12 +54,12 @@ Make_size_plot <- function(Set_size_data, sbar_color, ratios, ylabel, scale_sets
   
   if(ylabel == "Set Size" && scale_sets != "identity"){
     ylabel <- paste("Set Size", paste0("( ", scale_sets, " )"))
-    if(scale_sets == "log2"){
-      Set_size_data$y <- log2(Set_size_data$y)
-    }
-    if(scale_sets == "log10"){
-      Set_size_data$y <- log10(Set_size_data$y)
-    }
+    # if(scale_sets == "log2"){
+    #   Set_size_data$y <- log2(Set_size_data$y)
+    # }
+    # if(scale_sets == "log10"){
+    #   Set_size_data$y <- log10(Set_size_data$y)
+    # }
   }
   
   Size_plot <- (ggplot(data = Set_size_data, aes_string(x ="x", y = "y"))

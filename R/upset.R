@@ -142,6 +142,7 @@ upset <- function(data, nsets = 5, nintersects = 40, sets = NULL, keep.order = F
     Num_of_set <- Number_of_sets(Set_names)
     if(keep.order == F){
       Set_names <- order_sets(New_data, Set_names)
+      sbar_color <- order_sets_colours(New_data, Set_names,sbar_color)
     }
     All_Freqs <- specific_intersections(data, first.col, last.col, intersections, order.by, group.by, decreasing,
                                         cutoff, main.bar.color, Set_names)

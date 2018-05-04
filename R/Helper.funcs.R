@@ -69,6 +69,12 @@ order_sets <- function(data, sets){
   return(sets)
 }
 
+order_sets_colours <- function(data,sets,sbar_color){
+  sets <- colSums(data[sets])
+  sbar_color <- sbar_color[order(sets, decreasing = T)]
+  return(sbar_color)
+}
+
 ## Subsets intersection and element queries using expression parameter
 Subset_att <- function(data, exp){
   express <- unlist(strsplit(exp, " "))
